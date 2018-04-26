@@ -1,0 +1,132 @@
+@font-face{
+    @font-face {
+    font-family: 'huset';
+    src: url(font/HUSET_Regular.otf);
+    font-family: 'avenir';
+    src: url(font/Avenir.ttc);
+    font-family: 'avenir_next';
+    src: url(font/Avenir_Next.ttc);
+}
+body{
+    min-height: 100%;
+}
+html{
+    min-height: 100vh;
+}
+
+}  .music {
+  border: 1px solid #fff;
+  padding: 1.5em;
+  margin: 1em;
+}
+
+body{
+background: linear-gradient(45deg, #14A092, #438198, #3C1C6F );
+}
+.pagetitle{
+    margin-top:2em;
+    font-family: 'huset';
+    font-size: 4em;
+    text-align: center;
+}
+h1, h2, h3, p{
+    color: white;
+    font-family: 'avenir'
+}
+h1{
+    font-size: 24pt;
+    letter-spacing: 4x;
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+}
+h3{
+    font-size: 1em;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.presale{
+    grid-column: 1/-1;
+}
+.price, .presale{
+    text-align: right;
+}
+
+.appbar {
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  left:0;
+    z-index: 1;
+    transition: all .6s;
+
+}
+.shadow{
+    box-shadow: 0px 3px 6px rgba(68,68,68, 0.2);
+}
+img{
+    display: block;
+    width: 100%;
+}
+.appbar, .menu {
+  position: fixed;
+background-color: white;
+}
+.menu {
+width: 100vw;
+top:80px;
+left:0;
+transition: all 0.6s;
+color: #14A092;
+}
+.menuicon{
+    width: 45px;
+height:40px;
+margin-top: 20px;
+margin-left: 12px;
+fill: #14A092;
+transition: all .7s;
+}
+a{
+    text-decoration: none;
+    font-family: 'avenir';
+    color:#14A092;
+}
+ul{
+    list-style-type: none;
+}
+
+.menu.hidden {
+  transform: translateY(-100vh);
+}
+.logo{
+    width: 55px;
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 10px 12px 0 0;
+}
+.menuicon.rotate{
+  transform: rotate(-180deg);
+}
+
+#musiclist {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+@media (min-width: 1000px)  {
+  #musiclist {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1300px)  {
+  #musiclist {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
