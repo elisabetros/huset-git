@@ -15,29 +15,30 @@ window.addEventListener('load',()=>{
 
 let genbtn = document.querySelector(".showbtn");
 let showhide = document.querySelector(".genres")
+
     genbtn.addEventListener("click", showGenres)
     function showGenres(){
         if (showhide.style.display === "none") {
     showhide.style.display = "block";
-    genbtn.style.border="none";
+    genbtn.style.borderBottom="none";
     } else {
         showhide.style.display = "none";
-        genbtn.style.border="1px solid #fff";
+        genbtn.style.border="2px solid #fff";
     }
     }
 
-let venbtn = document.querySelector(".showbtnt");
+/*let venbtn = document.querySelector(".showbtnt");
 let showhidet = document.querySelector(".venues")
 venbtn.addEventListener("click", showVenues)
 function showVenues(){
         if (showhidet.style.display === "none") {
     showhidet.style.display = "block";
-    venbtn.style.border="none";
+    venbtn.style.borderBottom="none";
     } else {
         showhidet.style.display = "none";
-        venbtn.style.border="1px solid #fff";
+        venbtn.style.border="2px solid #fff";
     }
-    }
+    }*/
 
  fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/tags")
     .then(e=>e.json())
