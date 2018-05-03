@@ -13,21 +13,44 @@ window.addEventListener('load',()=>{
 
   }
 
- fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/pages")
-    .then(e=>e.json())
-    .then(buildMenu)
+let genbtn = document.querySelector(".showbtn");
+let showhide = document.querySelector(".genres")
+    genbtn.addEventListener("click", showGenres)
+    function showGenres(){
+        if (showhide.style.display === "none") {
+    showhide.style.display = "block";
+    genbtn.style.border="none";
+    } else {
+        showhide.style.display = "none";
+        genbtn.style.border="1px solid #fff";
+    }
+    }
 
-  function buildMenu(data){
-    let parentElement = document.querySelector(".menu ul");
+let venbtn = document.querySelector(".showbtnt");
+let showhidet = document.querySelector(".venues")
+venbtn.addEventListener("click", showVenues)
+function showVenues(){
+        if (showhidet.style.display === "none") {
+    showhidet.style.display = "block";
+    venbtn.style.border="none";
+    } else {
+        showhidet.style.display = "none";
+        venbtn.style.border="1px solid #fff";
+    }
+    }
+
+ fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/tags")
+    .then(e=>e.json())
+    .then(buildFilter)
+
+  function buildFilter(data){
+    let parentElement = document.querySelector(".genres ul");
     data.forEach(item => {
-      //console.log(item);
+      console.log(item);
       let li = document.createElement("li");
       let a = document.createElement("a");
-      a.textContent = item.title.rendered;
-      a.href=item.title.rendered+".html";
-        if(item.id == 97){
-            a.href = "index.html";
-        }
+      a.textContent = item.name;
+      a.href="index.html?tag="+item.id;
 
       li.appendChild(a);
       parentElement.appendChild(li);
@@ -35,7 +58,6 @@ window.addEventListener('load',()=>{
 
     })
   }
-
 
 
 

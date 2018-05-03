@@ -1,47 +1,114 @@
 @font-face{
     @font-face {
     font-family: 'huset';
-    src: url(font/HUSET_Regular.otf);
+    src: url(font/font_neon/HUSET_Regular.otf);
     font-family: 'avenir';
-    src: url(font/Avenir.ttc);
+    src: url(font/document_fonts/Avenir.ttc);
     font-family: 'avenir_next';
-    src: url(font/Avenir_Next.ttc);
+    src: url(font/document_fonts/Avenir_Next.ttc);
+}}
+
+.music{
+    margin:1em;
 }
 body{
-    min-height: 100%;
-}
-html{
+background: linear-gradient(45deg, #14A092, #438198, #3C1C6F, #3C1C6F, #438198 );
     min-height: 100vh;
+    font-family: 'avenir';
+    margin:0;
 }
-
-}  .music {
-  border: 1px solid #fff;
-  padding: 1.5em;
-  margin: 1em;
-}
-
-body{
-background: linear-gradient(45deg, #14A092, #438198, #3C1C6F );
+ul>li{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 30px;
 }
 .pagetitle{
-    margin-top:2em;
+    margin:110px 10px 10px 10px;
     font-family: 'huset';
+    font-weight: 100;
     font-size: 4em;
     text-align: center;
 }
-h1, h2, h3, p{
+.subtitle{
+    margin-top: 2em;
+}
+.title{
+    text-align: left;
+}
+h1, h2, h3, h4, p, footer{
     color: white;
-    font-family: 'avenir'
 }
 h1{
-    font-size: 24pt;
-    letter-spacing: 4x;
+    font-size: 20pt;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    padding: 0 0 10px 0;
+   margin: 5px 0 10px 0;
+    padding: 0;
+}
+h2{
+    font-size:  16pt;
+}
+
+h1{
+   grid-column: 1/-1;
+    text-align: center;
 }
 h3{
     font-size: 1em;
 }
+p{
+    font-size: 11pt;
+}
+
+.info {
+    margin: .4em 0;
+    max-height: 40px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .2);
+    cursor: pointer;
+    transition: max-height 0.6s ease-out;
+}
+.info h2{
+    font-size: 11pt;
+    padding: 10px;
+    margin: 0;
+}
+.info p{
+    padding: 0 10px 10px 10px;
+    margin: 0;
+}
+
+.info.unfold {
+    max-height: 700px;
+    transition: max-height 0.6s ease-in;
+}
+.arrow {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 1em;
+    float: right;
+}
+.arrow:after {
+    content: '';
+    display: inline-block;
+    margin-left: 1em;
+    margin-bottom: .2em;
+    width: .5em;
+    height: .5em;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    float: right;
+    border-top: 0.1em solid #fff;
+    border-right: 0.1em solid #fff;
+}
+
+iframe{
+    width: 100%;
+    height: 50vh;
+}
+
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -69,34 +136,105 @@ img{
     display: block;
     width: 100%;
 }
+.concertimg{
+    grid-column: 1/-1
+}
 .appbar, .menu {
   position: fixed;
 background-color: white;
 }
 .menu {
 width: 100vw;
+height: 130px;
 top:80px;
 left:0;
 transition: all 0.6s;
 color: #14A092;
 }
 .menuicon{
-    width: 45px;
-height:40px;
-margin-top: 20px;
-margin-left: 12px;
+width: 45px;
+margin-top: 18px;
+margin-left: 18px;
 fill: #14A092;
 transition: all .7s;
 }
+li>a{
+   color:#14A092;
+}
 a{
     text-decoration: none;
-    font-family: 'avenir';
-    color:#14A092;
+    color:#fff;
+    opacity: .7;
+}
+a:hover{
+    opacity: 1;
 }
 ul{
     list-style-type: none;
 }
 
+#singleCon, .findus, .music{
+    border: 2px solid #fff;
+  padding: 1.5em;
+background-color: rgba(255,255,255, .2);
+}
+.showbtn, .showbtnt {
+    border: 1px solid #fff;
+background-color: rgba(255,255,255, .2);
+    padding: 16px;
+    margin:0 5vw 0 5vw;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+.showbtn:active{
+    background-color: rgba(255,255,255, .2);
+}
+
+.buttons{
+    text-align: center;
+    margin:5vh 15vw 0 15vw;
+}
+/*#dropdown, #dropdowntwo {
+    position: relative;
+    display: inline-block;
+    margin:5vw;
+}*/
+
+.genres {
+    display: none;
+   /* background-color: rgba(255,255,255, .2);*/
+}
+.genres ul{
+    text-align: left;
+   padding:0;
+    margin: 0 0 0 10px;
+    background-color: rgba(255,255,255, .2);
+}
+
+.genres a {
+    color:white;
+    padding: 8px;
+    margin:5px;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.about{
+    padding: 4vw;
+    border: 1px solid #fff;
+    font-weight: 100;
+background-color: rgba(255,255,255, .2);
+}
+#singleCon{
+   margin:70px 16vw 50px 16vw;
+}
+.findus, .about{
+    margin:50px 8vw 50px 8vw;
+}
+.map{
+    width: 100%;
+}
 .menu.hidden {
   transform: translateY(-100vh);
 }
@@ -105,7 +243,7 @@ ul{
     position: absolute;
     top:0;
     right:0;
-    margin: 10px 12px 0 0;
+    margin: 10px 20px 0 0;
 }
 .menuicon.rotate{
   transform: rotate(-180deg);
@@ -116,17 +254,49 @@ ul{
   grid-template-columns: 1fr;
 }
 
+.about>h2{
+        text-align: center;
+    }
+.faqgrid{
+margin:0;
+}
 
 @media (min-width: 1000px)  {
   #musiclist {
     grid-template-columns: 1fr 1fr;
+      padding: 2vw;
+      margin: 0 3vw 0 3vw;
   }
 
+    .faqgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .faqgrid>p{
+        grid-column: 1/-1;
+    }
+    .info{
+        margin:0;
+    }
+
+     #singleCon{
+    margin: 70px 26vw 50px 26vw;
+    }
+    .pagetitle{
+         margin: 110px 22vw 0px 22vw;
+    }
+    .genres ul li{
+display:inline-block;
+}
 }
 
-@media (min-width: 1300px)  {
+@media (min-width: 1200px)  {
   #musiclist {
     grid-template-columns: 1fr 1fr 1fr;
   }
+   .findus, .about{
+        margin: 70px 20vw 50px 20vw;
+    }
 
 }

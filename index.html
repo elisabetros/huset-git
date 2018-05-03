@@ -3,42 +3,63 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <meta name = "description" content="">
+    <meta name="keywords" content="text">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <title>HUSET-CPH</title>
       <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="appbar shadow">
         <img src="img/menu-huset.svg" alt="menu Icon" class="menuicon">
-     <img src="img/okkar-logo.svg" alt="Huset Logo" class="logo">
+     <a href="index.html"><img src="img/okkar-logo.svg" alt="Huset Logo" class="logo"></a>
     </header>
 
       <aside class="menu hidden">
     <ul>
-        <!--<li><a href="">Concerts</a></li>
+        <li><a href="index.html">Concerts</a></li>
         <li><a href="about.html">About Huset</a></li>
-        <li><a href="find-us.html">Find Us</a></li>
-        <li><a href="faq.html">FAQ</a></li>-->
+        <li><a href="findus.html">Find Us</a></li>
     </ul>
   </aside>
       <h1 class="pagetitle">CONSERTS</h1>
+
+    <div class="buttons">
+    <button class="showbtn">GENRE</button>
+    <button class="showbtnt">VENUE</button>
+    <div class="genres">
+    <ul></ul>
+    </div>
+
+    <div class="venues">
+    <ul></ul>
+    </div>
+    </div>
+
     <section id="musiclist">
   </section>
         <template id="musictemp">
     <article class="music">
         <h1 class="title">Title</h1>
-         <img src="" alt="">
         <div class="grid">
-        <h3 class="genre"></h3>
-        <h3 class="price"></h3>
-        <p class="presale">Presale price: <span></span> + fees</p>
+        <p class="date"></p>
+            <p class="genre"></p>
+         <img src="" alt="Image of the band playing" class="concertimg">
+            <h2 class="venue"></h2>
+            <h2 class="price"></h2>
             </div>
-        <p class="descript"></p>
          <p><a class="readmore" href="subpage.html?id=">Read more</a></p>
         </article>
         </template>
 
-
+<footer>&copy; ELÍSABET RÓS VALSDÓTTIR</footer>
 <script src="js/script.js"></script>
     <script src="js/menu.js"></script>
 </body>
