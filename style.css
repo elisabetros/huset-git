@@ -7,8 +7,65 @@
     font-family: 'avenir_next';
     src: url(font/document_fonts/Avenir_Next.ttc);
 }}
+/*********LOADER**********/
 
-.music{
+.page {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+}
+.hiddenloader {
+    opacity:0;
+    visibility: hidden;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    float: left;
+    margin: 0 5px;
+    animation: fx 1.8s ease infinite;
+}
+
+#d1 {
+    animation-delay: 0s;
+}
+
+#d2 {
+    animation-delay: 0.2s;
+}
+
+#d3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fx {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.music {
     margin:1em;
 }
 body{
@@ -31,6 +88,7 @@ ul>li{
 }
 .subtitle{
     margin-top: 2em;
+    text-align: left;
 }
 .title{
     text-align: left;
@@ -219,6 +277,9 @@ background-color: rgba(255,255,255, .2);
     font-size: 10pt;
     text-decoration: none;
 }
+.genre{
+    text-align: right;
+}
 
 .about{
     padding: 4vw;
@@ -227,7 +288,7 @@ background-color: rgba(255,255,255, .2);
 background-color: rgba(255,255,255, .2);
 }
 #singleCon{
-   margin:70px 16vw 50px 16vw;
+   margin:70px 6vw 50px 6vw;
 }
 .findus, .about{
     margin:50px 8vw 50px 8vw;

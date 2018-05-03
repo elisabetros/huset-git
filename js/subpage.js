@@ -1,12 +1,14 @@
 let urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get("id");
-
+showLoader();
 fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/music/"+id+ "?_embed")
   .then(e=>e.json())
   .then(showSinglePost)
 
 
 function showSinglePost(aPost){
+    hideLoader();
+    document.querySelector(".page").classList.remove("hiddenloader");
   console.log(aPost);
 
         let day= aPost.acf.date.substring(0,2);

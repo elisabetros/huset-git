@@ -1,6 +1,6 @@
 let template = document.querySelector("#musictemp").content;
 let musiclist = document.querySelector("#musiclist");
-
+showLoader()
       function fetchMusic() {
 
 let urlParams = new URLSearchParams(window.location.search);
@@ -21,6 +21,8 @@ let endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/music?_
         }*/
 
         function showMusic(data) {
+            hideLoader()
+             document.querySelector(".page").classList.remove("hiddenloader");
             data.forEach(showSingleEvent);
         }
 

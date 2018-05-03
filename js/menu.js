@@ -46,7 +46,6 @@ function showVenues(){
   function buildFilter(data){
     let parentElement = document.querySelector(".genres ul");
     data.forEach(item => {
-      console.log(item);
       let li = document.createElement("li");
       let a = document.createElement("a");
       a.textContent = item.name;
@@ -60,10 +59,15 @@ function showVenues(){
   }
 
 
-
-
-
-
-
-
 });
+
+function showLoader(){
+    let loader = document.querySelector(".container");
+    loader.classList.remove("hiddenloader");
+    document.querySelector("footer").classList.add("hiddenloader");
+}
+function hideLoader(){
+    let loader = document.querySelector(".container");
+    loader.classList.add("hiddenloader");
+    document.querySelector("footer").classList.remove("hiddenloader");
+}
